@@ -37,7 +37,7 @@ def movefiles(src):
         # prepare the ignore list of files
         logger.info('Processing ignore list')
         for fn in remove:
-            ignfl.append(fn + '*')
+            ignfl.append('*' + fn + '*')
             logger.debug('Ignoring: %s', fn)
 
         # copy the new files to the ingestor directories and ignore files we don't want
